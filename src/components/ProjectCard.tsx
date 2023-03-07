@@ -1,8 +1,5 @@
-import Module from 'module';
-import { useEffect, FC } from 'react';
+import { FC } from 'react';
 import Project from '../Project';
-// import image from '/assets/images/me.jpeg';
-import image from '/assets/images/me.jpeg';
 
 interface Props {
   project: Project;

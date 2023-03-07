@@ -1,12 +1,13 @@
-import { ReactElement, FC } from 'react';
+import { FC } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export const Header: FC = () => {
   return (
     <header>
       <nav>
-        <a href="/">Home</a>
+        <NavLink to="/">Home</NavLink>
         <a href="/about">About</a>
-        <a href="/blog">Blog</a>
+        <NavLink to="/blog">Blog</NavLink>
         <a href="https://github.com/spghtti/" target="_blank">
           GitHub
         </a>

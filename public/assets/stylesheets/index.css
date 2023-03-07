@@ -23,6 +23,12 @@ nav {
 .emoji {
   margin: 0 10px;
 }
+.card-one > .homepage-card-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
 .card-one * h1 {
   font-size: 3rem;
 }
