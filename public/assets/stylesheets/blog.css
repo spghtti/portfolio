@@ -66,3 +66,15 @@
 .post-body {
   margin-top: 1rem;
 }
+@media (max-width: 930px) {
+  .post-list,
+  .blog-post {
+    padding: 20px 60px !important;
+  }
+}
+@media (max-width: 530px) {
+  .post-list,
+  .blog-post {
+    padding: 20px 0 !important;
+  }
+}

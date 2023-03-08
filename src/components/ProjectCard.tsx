@@ -24,8 +24,8 @@ export const ProjectCard: FC<Props> = ({
           <div>
             <h1 className="homepage-card-headline">{project.title}</h1>
             <ul className="homepage-card-stack">
-              {project.stack.map((item: String) => (
-                <li>{item}</li>
+              {project.stack.map((item: String, index) => (
+                <li key={index}>{item}</li>
               ))}
             </ul>
           </div>
