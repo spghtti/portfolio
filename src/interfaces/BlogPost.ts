@@ -3,8 +3,8 @@ export interface BlogPost {
   body: string;
   preview: string;
   date: string;
+  updated: string;
   _id: string;
   tags: string[];
   views: number;
-  image: string;
 }
