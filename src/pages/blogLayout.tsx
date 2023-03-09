@@ -11,11 +11,19 @@ export function BlogLayout() {
 
   const [post, setPost] = useState<BlogPost>();
   const [err, setErr] = useState('');
+
   useEffect(() => {
+    const controller = new AbortController();
+    const signal = controller.signal;
+
     fetch(`http://localhost:5000/posts/${id}`)
       .then((response) => response.json())
       .then((data) => setPost(data))
-      .catch((err) => setErr('Error retrieving posts.'));
+      .catch((err) => {
+        err.name === 'AbortError' || setErr('Error retrieving post.');
+      });
+
+    return () => controller.abort();
   }, []);
 
   return (

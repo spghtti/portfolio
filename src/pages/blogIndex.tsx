@@ -8,11 +8,19 @@ import { BlogPost } from '../interfaces/BlogPost';
 export function Blog(): ReactElement {
   const [list, setList] = useState([]);
   const [err, setErr] = useState('');
+
   useEffect(() => {
-    fetch('http://localhost:5000/posts')
+    const controller = new AbortController();
+    const signal = controller.signal;
+
+    fetch('http://localhost:5000/posts', { signal })
       .then((response) => response.json())
       .then((data) => setList(data))
-      .catch((err) => setErr('Error retrieving posts.'));
+      .catch((err) => {
+        err.name === 'AbortError' || setErr('Error retrieving posts.');
+      });
+
+    return () => controller.abort();
   }, []);
 
   return (
