@@ -3,6 +3,7 @@ import { Home } from './pages/home';
 import { Blog } from './pages/blogIndex';
 import { NotFound } from './pages/notFound';
 import { BlogLayout } from './pages/blogLayout';
+import { Contact } from './pages/contact';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route index={true} element={<Blog />} />
         <Route path=":id" element={<BlogLayout />} />
       </Route>
+      <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

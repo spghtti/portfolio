@@ -8,6 +8,7 @@ export const Header: FC = () => {
         <NavLink to="/">Home</NavLink>
         <a href="/about">About</a>
         <NavLink to="/blog">Blog</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
         <a href="https://github.com/spghtti/" target="_blank">
           GitHub
         </a>
