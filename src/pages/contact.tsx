@@ -9,10 +9,10 @@ export function Contact() {
       <Header />
       <div className=""></div>
       <div className="form-wrapper">
-        <h1 className="form-headline">Contact</h1>
+        <h1 className="page-headline">Contact</h1>
         <p>
           Have something you'd like to work on together? I'm open to new
-          opportunities. Want to say hi? I'm open to saying hi, too.
+          opportunities. Want to talk about programming? Let's talk.
         </p>
         <form
           className="contact-form"

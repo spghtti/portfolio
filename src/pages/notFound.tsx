@@ -7,10 +7,12 @@ export function NotFound(): ReactElement {
       <Header />
       <main>
         <div className="not-found-container">
-          <h1 className="not-found-headline">
+          <h1 className="page-headline">
             The page you’re looking for isn't here.
           </h1>
-          <h2>Maybe it'll be in the next version... &#129300;</h2>
+          <h2 className="page-subheadline">
+            Maybe it'll be in the next version... &#129300;
+          </h2>
         </div>
       </main>
     </div>

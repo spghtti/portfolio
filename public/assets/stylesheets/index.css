@@ -6,11 +6,11 @@
   width: 100%;
   padding-top: 2rem;
 }
-.not-found-container > h1 {
+.page-headline {
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: 700;
 }
-.not-found-container > h2 {
+.page-subheadline {
   font-size: 1.5rem;
   font-weight: 500;
 }

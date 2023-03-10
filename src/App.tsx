@@ -4,6 +4,7 @@ import { Blog } from './pages/blogIndex';
 import { NotFound } from './pages/notFound';
 import { BlogLayout } from './pages/blogLayout';
 import { Contact } from './pages/contact';
+import { Login } from './pages/login';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path=":id" element={<BlogLayout />} />
       </Route>
       <Route path="/contact" element={<Contact />} />
+      <Route path="/login" element={<Login />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
