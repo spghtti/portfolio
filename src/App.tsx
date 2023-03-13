@@ -5,6 +5,7 @@ import { NotFound } from './pages/notFound';
 import { BlogLayout } from './pages/blogLayout';
 import { Contact } from './pages/contact';
 import { Login } from './pages/login';
+import { Logout } from './pages/logout';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       </Route>
       <Route path="/contact" element={<Contact />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/logout" element={<Logout />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

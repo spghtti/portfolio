@@ -2,6 +2,8 @@ import { FormEvent, ReactElement } from 'react';
 import { Header } from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 
+// TODO: Refactor JWT storage
+
 export function Login() {
   const navigate = useNavigate();
 
@@ -20,14 +22,10 @@ export function Login() {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
         localStorage.setItem('token', res.token);
+        localStorage.setItem('isLoggedIn', 'true');
         navigate('/blog');
       });
-
-    // const token = JSON.parse(localStorage.getItem('token'));
-    //   const submit = document.getElementById('submit');
-    //   submit.
   }
 
   return (
