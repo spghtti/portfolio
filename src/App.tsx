@@ -16,8 +16,6 @@ function App() {
         <Route path=":id" element={<BlogLayout />} />
       </Route>
       <Route path="/contact" element={<Contact />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/logout" element={<Logout />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

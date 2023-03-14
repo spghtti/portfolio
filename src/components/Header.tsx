@@ -1,6 +1,4 @@
-import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
-import { checkLogin } from '../checkLogin';
 
 export const Header = () => {
   return (
@@ -12,11 +10,6 @@ export const Header = () => {
         <a href="https://github.com/spghtti/" target="_blank">
           GitHub
         </a>
-        {checkLogin() ? (
-          <NavLink to="/logout">Logout</NavLink>
-        ) : (
-          <NavLink to="/login">Login</NavLink>
-        )}
       </nav>
     </header>
   );

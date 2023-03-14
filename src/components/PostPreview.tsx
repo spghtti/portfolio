@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { BlogPost } from '../interfaces/BlogPost';
 import { FormattedDate } from './FormattedDate';
 

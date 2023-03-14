@@ -5,7 +5,7 @@ import { BlogPost } from '../interfaces/BlogPost';
 
 // TODO: Paginate results
 
-export function Blog(): ReactElement {
+export function Blog() {
   const [list, setList] = useState([]);
   const [err, setErr] = useState('');
 

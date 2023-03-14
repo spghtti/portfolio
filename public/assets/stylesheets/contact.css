@@ -1,7 +1,7 @@
 .form-wrapper {
   padding: 0 20ch;
 }
-.contact-form {
+.input-form {
   display: flex;
   flex-direction: column;
 }

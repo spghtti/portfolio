@@ -15,7 +15,7 @@ export function Contact() {
           opportunities. Want to talk about programming? Let's talk.
         </p>
         <form
-          className="contact-form"
+          className="input-form"
           id="contact-form"
           action="https://formspree.io/f/xknekkqk"
           method="POST"

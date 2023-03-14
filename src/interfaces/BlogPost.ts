@@ -7,4 +7,5 @@ export interface BlogPost {
   _id: string;
   tags: string[];
   views: number;
+  comments: object[];
 }
