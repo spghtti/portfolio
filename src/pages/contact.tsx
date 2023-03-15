@@ -24,12 +24,14 @@ export function Contact() {
             type="text"
             name="name"
             placeholder="Name"
+            minLength={3}
             className="form-text-field"
             required
           />
           <input
             type="email"
             className="form-text-field"
+            minLength={3}
             name="email"
             placeholder="Email"
             required
@@ -39,6 +41,7 @@ export function Contact() {
             placeholder="Message"
             className="form-text-field"
             required
+            minLength={3}
           ></textarea>
           <input
             id="sub"
