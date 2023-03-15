@@ -1,4 +1,4 @@
-import Project from './Project';
+import Project from './interfaces/Project';
 
 export const projectOne: Project = {
   title: 'Blog API + CMS',
