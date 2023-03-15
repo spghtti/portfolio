@@ -4,8 +4,6 @@ import { Blog } from './pages/blogIndex';
 import { NotFound } from './pages/notFound';
 import { BlogLayout } from './pages/blogLayout';
 import { Contact } from './pages/contact';
-import { Login } from './pages/login';
-import { Logout } from './pages/logout';
 
 function App() {
   return (

@@ -80,7 +80,7 @@ export function BlogLayout() {
                 <CommentForm postId={post._id} />
                 <ul>
                   {post &&
-                    post.comments.map((comment) => (
+                    post.comments.map((comment: any) => (
                       <Comment
                         key={comment._id}
                         comment={comment as ICommentProps}
