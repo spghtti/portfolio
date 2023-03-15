@@ -1,4 +1,4 @@
-import { ReactElement, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Header } from '../components/Header';
 import { PostPreview } from '../components/PostPreview';
 import { BlogPost } from '../interfaces/BlogPost';

@@ -1,19 +1,21 @@
 import { useState, FormEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export function CommentForm(props: { postId: string }) {
-  const [msg, setMsg] = useState('');
+  const [error, setError] = useState('');
+
+  const navigate = useNavigate();
 
   // TODO: Form validation
 
-  async function postComment(e: FormEvent<HTMLFormElement>) {
+  function postComment(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = {
       name: (document.getElementById('name') as HTMLInputElement).value,
       email: (document.getElementById('email') as HTMLInputElement).value,
       body: (document.getElementById('body') as HTMLInputElement).value,
     };
-    console.log(JSON.stringify(data));
-    await fetch(`http://localhost:5000/posts/${props.postId}/comments`, {
+    fetch(`http://localhost:5000/posts/${props.postId}/comments`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -23,12 +25,17 @@ export function CommentForm(props: { postId: string }) {
       body: JSON.stringify(data),
     })
       .then((response) => {
-        console.log(response);
         response.json();
+        if (!response.ok) {
+          setError(
+            `Error: ${response.statusText} (${response.status.toString()})`
+          );
+        } else {
+          navigate(0);
+        }
       })
-      .then(() => setMsg('Success'))
       .catch((err) => {
-        setMsg('Error making post.');
+        setError(err);
       });
   }
 
@@ -45,21 +52,30 @@ export function CommentForm(props: { postId: string }) {
           name="name"
           id="name"
           className="form-text-field"
+          minLength={3}
+          maxLength={60}
           required
+          autoComplete="off"
         />
         <input
-          type="text"
+          type="email"
           id="email"
           name="email"
+          minLength={3}
+          maxLength={60}
           placeholder="Email"
           className="form-text-field"
+          autoComplete="off"
           required
         />
         <textarea
           name="body"
           id="body"
           placeholder="Message"
+          minLength={3}
+          maxLength={2000}
           className="form-text-field"
+          autoComplete="off"
           required
         ></textarea>
         <input
@@ -68,7 +84,7 @@ export function CommentForm(props: { postId: string }) {
           className="form-submit-button"
           value="&#10140;"
         />
-        {msg}
+        <span className="error">{error}</span>
       </form>
     </div>
   );
