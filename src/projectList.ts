@@ -7,7 +7,7 @@ export const projectOne: Project = {
   stack: ['Mongo', 'Express', 'React', 'Node', 'Typescript'],
   github_link: 'https://github.com/spghtti/blog-api',
   live_link: '/blog',
-  image: 'reactr.png',
+  image: 'blog.png',
 };
 
 export const projectTwo: Project = {
