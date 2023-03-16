@@ -66,9 +66,9 @@ export function BlogLayout() {
             )}
             {/* {post.stack && } */}
             <ul className="post-tags">
-              <li>Javascript</li>
-              <li>CSS</li>
-              <li>HTML</li>
+              {post.tags.map((tag: string, i) => (
+                <li key={i}>{tag}</li>
+              ))}
             </ul>
             <article className="post-body">{post.body}</article>
             <div className="comment-section">
