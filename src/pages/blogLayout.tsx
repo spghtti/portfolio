@@ -1,4 +1,4 @@
-import { ReactElement, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { BlogPost } from '../interfaces/BlogPost';
@@ -6,6 +6,8 @@ import { ICommentProps } from '../interfaces/Comment';
 import { FormattedDate } from '../components/FormattedDate';
 import { Comment } from '../components/Comment';
 import { CommentForm } from '../components/CommentForm';
+import parse from 'html-react-parser';
+import Prism from 'prismjs';
 
 // TODO: Increment view on page load
 
@@ -40,6 +42,7 @@ export function BlogLayout() {
 
     fetch(`http://localhost:5000/posts/${id}`)
       .then((response) => response.json())
+
       .then((data) => setPost(data))
       .catch((err) => {
         err.name === 'AbortError' || setErr('Error retrieving post.');
@@ -57,20 +60,19 @@ export function BlogLayout() {
           <article className="blog-post">
             <h1 className="post-title">{post.title}</h1>
             <span className="post-date">
-              <FormattedDate date={post.date} />
+              <FormattedDate date={post.date} />.{' '}
             </span>
             {post.updated && (
               <span className="post-date">
-                Updated on <FormattedDate date={post.date} />
+                Updated <FormattedDate date={post.updated} />.
               </span>
             )}
-            {/* {post.stack && } */}
             <ul className="post-tags">
               {post.tags.map((tag: string, i) => (
                 <li key={i}>{tag}</li>
               ))}
             </ul>
-            <article className="post-body">{post.body}</article>
+            <article className="post-body">{parse(post.body)}</article>
             <div className="comment-section">
               <h1 className="comment-section-headline">Comments</h1>
               <div className="comment-wrapper">
@@ -89,6 +91,7 @@ export function BlogLayout() {
                 </ul>
               </div>
             </div>
+            {Prism.highlightAll()}
           </article>
         )}
       </main>

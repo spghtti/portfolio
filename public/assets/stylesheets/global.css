@@ -61,15 +61,8 @@ img {
   max-width: 100%;
   height: auto;
 }
-code {
-  padding: 2px 5px;
-  background-color: var(--code-background-color);
-}
 pre {
   padding: 1rem;
-}
-pre > code {
-  all: unset;
 }
 blockquote {
   border: 1px solid #999;

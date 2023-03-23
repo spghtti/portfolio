@@ -17,7 +17,7 @@ export function Blog() {
       .then((response) => response.json())
       .then((data) => setList(data))
       .catch((err) => {
-        err.name === 'AbortError' || setErr('Error retrieving posts.');
+        err.name !== 'AbortError' && setErr('Error retrieving posts.');
       });
 
     return () => controller.abort();
