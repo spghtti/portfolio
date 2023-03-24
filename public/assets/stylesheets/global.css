@@ -73,7 +73,6 @@ blockquote {
 }
 a {
   display: inline-block;
-  text-decoration: none;
 }
 a:hover {
   cursor: pointer;
@@ -87,6 +86,9 @@ header {
 }
 nav {
   text-align: right;
+}
+nav > a {
+  text-decoration: none;
 }
 p {
   cursor: default;

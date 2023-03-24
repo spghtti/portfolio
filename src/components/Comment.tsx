@@ -3,7 +3,7 @@ import { FormattedDate } from '../components/FormattedDate';
 
 export function Comment(props: { comment: ICommentProps }) {
   return (
-    <li className="comment" id={props.comment._id}>
+    <li className="blog-comment" id={props.comment._id}>
       <div className="comment-info">
         <h1 className="comment-name">{props.comment.name}</h1>{' '}
         <span className="comment-date">

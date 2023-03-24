@@ -22,6 +22,7 @@
   font-size: 1.8rem;
   font-style: bold;
   font-weight: 800;
+  text-decoration: none;
 }
 .preview-title:hover {
   text-decoration: underline;
@@ -46,8 +47,15 @@
 }
 .read-more-link {
   font-weight: 600;
+  text-decoration: none;
 }
 .read-more-link:hover {
+  text-decoration: underline;
+}
+.blog-post * {
+  font-family: inherit;
+}
+.blog-post > a {
   text-decoration: underline;
 }
 .blog-post,
@@ -86,7 +94,7 @@
 .comment-wrapper {
   margin-left: 1rem;
 }
-.comment {
+.blog-comment {
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 20px;
@@ -111,6 +119,7 @@
   margin: 0.5rem 0;
   border-radius: 25px;
   font-size: 0.8rem;
+  border: 1px solid gray;
   padding: 0.3rem 0.75rem;
   border: 1px solid gray;
 }

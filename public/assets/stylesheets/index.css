@@ -133,16 +133,20 @@ nav {
 .homepage-card-stack {
   display: flex;
   flex-wrap: wrap;
+  /* height: 50px; */
 }
 .homepage-card-stack li {
   font-style: italic;
-  font-size: 0.9rem;
+  font-size: 1rem;
   display: inline;
   color: var(--font-color-accent);
   margin-right: 0.5rem;
+  height: auto;
 }
 .homepage-card-description {
-  margin: 1rem 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  height: 75px;
 }
 .project-image {
   /* width: 400px;

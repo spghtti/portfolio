@@ -3,7 +3,7 @@ import Project from './interfaces/Project';
 export const projectOne: Project = {
   title: 'Blog API + CMS',
   description:
-    'A blog API for my portfolio and CMS for writing and editing posts. Features user commenting.',
+    'A blog API for my portfolio and CMS for writing and editing posts. Features rich a rich text editor and user commenting.',
   stack: ['Mongo', 'Express', 'React', 'Node', 'Typescript'],
   github_link: 'https://github.com/spghtti/blog-api',
   live_link: '/blog',
