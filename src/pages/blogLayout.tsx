@@ -27,6 +27,12 @@ function showCommentForm() {
   }
 }
 
+function decodeHtml(html: string) {
+  const txt = document.createElement('textarea');
+  txt.innerHTML = html;
+  return txt.value;
+}
+
 export function BlogLayout() {
   document
     .getElementById('comment-form-button')
@@ -72,7 +78,9 @@ export function BlogLayout() {
                 <li key={i}>{tag}</li>
               ))}
             </ul>
-            <article className="post-body">{parse(post.body)}</article>
+            <article className="post-body">
+              {parse(decodeHtml(post.body))}
+            </article>
             <div className="comment-section">
               <h1 className="comment-section-headline">Comments</h1>
               <div className="comment-wrapper">

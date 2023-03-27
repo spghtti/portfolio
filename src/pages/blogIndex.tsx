@@ -15,7 +15,10 @@ export function Blog() {
 
     fetch('http://localhost:5000/posts', { signal })
       .then((response) => response.json())
-      .then((data) => setList(data))
+      .then((data) => {
+        console.log(data);
+        setList(data);
+      })
       .catch((err) => {
         err.name !== 'AbortError' && setErr('Error retrieving posts.');
       });
