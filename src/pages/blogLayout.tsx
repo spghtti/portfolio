@@ -78,7 +78,7 @@ export function BlogLayout() {
                 post.tags.map((tag: string, i) => <li key={i}>{tag}</li>)}
             </ul>
             <article className="post-body">
-              {parse(decodeHtml(post.body))}
+              {post.body && parse(decodeHtml(post.body))}
             </article>
             <div className="comment-section">
               <h1 className="comment-section-headline">Comments</h1>
@@ -88,7 +88,7 @@ export function BlogLayout() {
                 </button>
                 <CommentForm postId={post._id} />
                 <ul>
-                  {post &&
+                  {post.comments.length > 0 &&
                     post.comments.map((comment: any) => (
                       <Comment
                         key={comment._id}
