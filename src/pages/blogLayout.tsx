@@ -46,9 +46,8 @@ export function BlogLayout() {
   useEffect(() => {
     const controller = new AbortController();
 
-    fetch(`http://localhost:5000/posts/${id}`)
+    fetch(`${import.meta.env.BLOG_API_URL}${id}`)
       .then((response) => response.json())
-
       .then((data) => setPost(data))
       .catch((err) => {
         err.name === 'AbortError' || setErr('Error retrieving post.');

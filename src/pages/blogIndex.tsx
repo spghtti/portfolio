@@ -13,10 +13,9 @@ export function Blog() {
     const controller = new AbortController();
     const signal = controller.signal;
 
-    fetch('http://localhost:5000/posts', { signal })
+    fetch(`${import.meta.env.VITE_BLOG_API_URL}/posts`, { signal })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setList(data);
       })
       .catch((err) => {
