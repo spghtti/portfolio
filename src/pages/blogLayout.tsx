@@ -46,7 +46,7 @@ export function BlogLayout() {
   useEffect(() => {
     const controller = new AbortController();
 
-    fetch(`${import.meta.env.BLOG_API_URL}${id}`)
+    fetch(`${import.meta.env.VITE_BLOG_API_URL}/posts/${id}`)
       .then((response) => response.json())
       .then((data) => setPost(data))
       .catch((err) => {

@@ -114,7 +114,6 @@
   margin-right: auto;
 }
 .add-comment {
-  background-color: rgb(164, 164, 164);
   color: var(--background-color);
   margin-bottom: 1.5rem;
 }
