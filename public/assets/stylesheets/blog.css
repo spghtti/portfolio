@@ -129,6 +129,12 @@
 .add-comment-button:hover {
   cursor: pointer;
 }
+.post-tags > li,
+time,
+.post-date,
+.post-title {
+  cursor: default;
+}
 @media (max-width: 930px) {
   .post-list,
   .blog-post {
