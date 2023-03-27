@@ -96,6 +96,9 @@ p {
 article {
   cursor: text;
 }
+strong {
+  font-weight: bold;
+}
 .error {
   color: red;
   font-style: italic;

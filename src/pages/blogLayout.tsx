@@ -74,9 +74,8 @@ export function BlogLayout() {
               </span>
             )}
             <ul className="post-tags">
-              {post.tags.map((tag: string, i) => (
-                <li key={i}>{tag}</li>
-              ))}
+              {post.tags &&
+                post.tags.map((tag: string, i) => <li key={i}>{tag}</li>)}
             </ul>
             <article className="post-body">
               {parse(decodeHtml(post.body))}
