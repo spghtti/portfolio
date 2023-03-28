@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { BlogPost } from '../interfaces/BlogPost';
@@ -11,22 +11,6 @@ import Prism from 'prismjs';
 
 // TODO: Increment view on page load
 
-function showCommentForm() {
-  const form = document.getElementById('comment-form');
-  const button = document.getElementById('comment-form-button');
-
-  if (form) {
-    form.style.display === 'none'
-      ? (form.style.display = 'block')
-      : (form.style.display = 'none');
-  }
-  if (button) {
-    button.textContent === 'Add a comment'
-      ? (button.textContent = 'Hide comment')
-      : (button.textContent = 'Add a comment');
-  }
-}
-
 function decodeHtml(html: string) {
   const txt = document.createElement('textarea');
   txt.innerHTML = html;
@@ -34,14 +18,27 @@ function decodeHtml(html: string) {
 }
 
 export function BlogLayout() {
-  document
-    .getElementById('comment-form-button')
-    ?.addEventListener('click', showCommentForm);
-
   const { id } = useParams();
 
   const [post, setPost] = useState<BlogPost>();
   const [err, setErr] = useState('');
+  const ref = useRef(post);
+
+  function showCommentForm() {
+    const form = document.getElementById('comment-form');
+    const button = document.getElementById('comment-form-button');
+
+    if (form) {
+      form.style.display === 'none'
+        ? (form.style.display = 'block')
+        : (form.style.display = 'none');
+    }
+    if (button) {
+      button.textContent === 'Add a comment'
+        ? (button.textContent = 'Hide comment')
+        : (button.textContent = 'Add a comment');
+    }
+  }
 
   useEffect(() => {
     const controller = new AbortController();
@@ -53,8 +50,14 @@ export function BlogLayout() {
         err.name === 'AbortError' || setErr('Error retrieving post.');
       });
 
-    return () => controller.abort();
+    return () => {
+      controller.abort();
+    };
   }, []);
+
+  useEffect(() => {
+    Prism.highlightAll();
+  }, [post]);
 
   return (
     <div>
@@ -82,7 +85,11 @@ export function BlogLayout() {
             <div className="comment-section">
               <h1 className="comment-section-headline">Comments</h1>
               <div className="comment-wrapper">
-                <button className="add-comment-button" id="comment-form-button">
+                <button
+                  className="add-comment-button"
+                  id="comment-form-button"
+                  onClick={showCommentForm}
+                >
                   Add a comment
                 </button>
                 <CommentForm postId={post._id} />
@@ -97,7 +104,6 @@ export function BlogLayout() {
                 </ul>
               </div>
             </div>
-            {Prism.highlightAll()}
           </article>
         )}
       </main>
