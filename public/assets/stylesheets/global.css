@@ -17,7 +17,7 @@
   --shadow-color: #b7b6b6;
 }
 body {
-  font-family: 'San Francisco Display';
+  font-family: 'San Francisco Display', Arial, Helvetica, sans-serif;
   margin: auto;
   padding: 20px;
   max-width: 1000px;
@@ -40,6 +40,10 @@ b {
 }
 a {
   color: #3b4342;
+  font-family: 'San Francisco Display', Arial, Helvetica, sans-serif;
+}
+button {
+  font-family: 'San Francisco Display', Arial, Helvetica, sans-serif;
 }
 nav a {
   margin-left: 10px;
