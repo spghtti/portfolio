@@ -187,8 +187,6 @@ nav {
   height: 75px;
 }
 .project-image {
-  /* width: 400px;
-  height: 400px; */
   margin: auto;
   display: block;
 }
@@ -204,5 +202,14 @@ nav {
 @media (max-width: 520px) {
   .homepage-picture-img {
     display: none;
+  }
+  .hero-card-buttons-container {
+    display: flex;
+  }
+  .hero-card-buttons-container > a {
+    flex: 1;
+  }
+  .hero-card-buttons-container > a > button {
+    width: 90%;
   }
 }
