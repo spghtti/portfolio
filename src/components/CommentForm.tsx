@@ -15,15 +15,18 @@ export function CommentForm(props: { postId: string }) {
       email: (document.getElementById('email') as HTMLInputElement).value,
       body: (document.getElementById('body') as HTMLInputElement).value,
     };
-    fetch(`http://localhost:5000/posts/${props.postId}/comments`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      mode: 'cors',
-      referrerPolicy: 'no-referrer',
-      body: JSON.stringify(data),
-    })
+    fetch(
+      `${import.meta.env.VITE_BLOG_API_URL}/posts/${props.postId}/comments`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        mode: 'cors',
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify(data),
+      }
+    )
       .then((response) => {
         response.json();
         if (!response.ok) {
