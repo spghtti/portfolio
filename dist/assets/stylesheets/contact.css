@@ -1,0 +1,38 @@
+.form-wrapper {
+  padding: 0 20ch;
+}
+.input-form {
+  display: flex;
+  flex-direction: column;
+}
+.form-wrapper > p {
+  margin-bottom: 1rem;
+}
+textarea {
+  resize: none;
+  font: inherit;
+  height: 100px;
+  width: auto;
+}
+input {
+  font: inherit;
+}
+.form-text-field {
+  border-radius: 25px;
+  border: 1px solid gray;
+  padding: 10px;
+  margin-bottom: 0.5rem;
+}
+.form-submit-button {
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border: 1px solid gray;
+}
+.form-submit-button {
+  cursor: pointer;
+}
+::placeholder {
+  padding-left: 10px;
+}
