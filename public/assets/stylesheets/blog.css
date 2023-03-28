@@ -145,6 +145,14 @@ code {
   font-size: 1em;
   text-align: left;
 }
+article > p,
+article > h1,
+article > h2,
+article > h3,
+article > pre,
+article > code {
+  cursor: text;
+}
 @media (max-width: 930px) {
   .post-list,
   .blog-post {

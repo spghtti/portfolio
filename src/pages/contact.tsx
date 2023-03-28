@@ -12,7 +12,8 @@ export function Contact() {
         <h1 className="page-headline">Contact</h1>
         <p>
           Have something you'd like to work on together? I'm open to new
-          opportunities. Want to talk about programming? Let's talk.
+          opportunities. Have a question about something I've worked on? Let's
+          chat.
         </p>
         <form
           className="input-form"

@@ -12,7 +12,8 @@ export function Home(): ReactElement {
           <div className="homepage-card card-one">
             <div className="homepage-card-inner">
               <h1>
-                Hey,<span className="emoji">&#x1F44B;</span> I'm Matt.
+                Hey,<span className="emoji wave-emoji">&#x1F44B;</span> I'm
+                Matt.
               </h1>
               <h2>I'm a full-stack web dev.</h2>
               <h2>Check out some of my work below.</h2>

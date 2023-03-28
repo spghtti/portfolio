@@ -93,11 +93,11 @@ nav > a {
 p {
   cursor: default;
 }
-article {
-  cursor: text;
-}
 strong {
   font-weight: bold;
+}
+em {
+  font-style: italic;
 }
 .error {
   color: red;
