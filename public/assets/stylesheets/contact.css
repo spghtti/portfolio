@@ -27,10 +27,16 @@ input {
 }
 .form-submit-button {
   margin-left: auto;
-  padding: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
   width: 40px;
   height: 40px;
   border-radius: 50px;
+  color: var(--font-color-main);
+  background-color: var(--button-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid gray;
 }
 .form-submit-button:hover {

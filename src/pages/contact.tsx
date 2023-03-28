@@ -46,7 +46,7 @@ export function Contact() {
             ></textarea>
             <input
               id="sub"
-              className="form-submit-button outline"
+              className="form-submit-button"
               type="submit"
               value="&#10140;"
             />
