@@ -15,6 +15,7 @@
   --font-color-accent: #3b4342;
   --code-background-color: #18181a;
   --shadow-color: #b7b6b6;
+  --button-background-color: #e9e9ed;
 }
 body {
   font-family: 'San Francisco Display', Arial, Helvetica, sans-serif;

@@ -99,7 +99,8 @@ nav {
   padding: 0.75rem 1.5rem;
   margin-right: 0.5rem;
   margin-top: 0.5rem;
-  cursor: pointer;
+  color: var(--font-color-main);
+  background-color: var(--button-background-color);
 }
 .project-card-buttons {
   font-family: 'San Francisco';
@@ -108,8 +109,6 @@ nav {
   height: 2.5rem;
   border-radius: 20px;
   border-style: none;
-  /* padding: 0.75rem 1.5rem; */
-  cursor: pointer;
 }
 .project-card-buttons > a > button {
   font-family: 'San Francisco';
@@ -118,7 +117,8 @@ nav {
   height: 2.5rem;
   border-radius: 20px;
   border-style: none;
-  cursor: pointer;
+  color: var(--font-color-main);
+  background-color: var(--button-background-color);
 }
 .icon-only {
   text-align: right;

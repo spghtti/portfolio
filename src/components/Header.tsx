@@ -6,10 +6,10 @@ export const Header = () => {
       <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/blog">Blog</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
         <a href="https://github.com/spghtti/" target="_blank">
           GitHub
         </a>
+        <NavLink to="/contact">Contact</NavLink>
       </nav>
     </header>
   );
