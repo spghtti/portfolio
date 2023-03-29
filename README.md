@@ -20,6 +20,7 @@ npm run preview
 - [Typescript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
 - [My Blog API](https://github.com/spghtti/blog-api)
+- [PrismJS](https://prismjs.com/)
 
 ## License
 
