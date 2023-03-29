@@ -38,7 +38,8 @@ nav {
 }
 .wave-emoji {
   display: inline-block;
-  animation: wobble 1.5s ease-in-out;
+  animation: wobble 2s ease-in-out;
+  animation-delay: 0.5s;
 }
 @keyframes wobble {
   0%,
