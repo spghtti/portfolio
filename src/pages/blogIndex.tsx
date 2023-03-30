@@ -32,6 +32,7 @@ export function Blog() {
         <div className="error">{err}</div>
       ) : (
         <div className="post-list">
+          <h1 className="page-headline">Blog</h1>
           {list.map((post: BlogPost) => (
             <PostPreview key={post._id} post={post} />
           ))}
