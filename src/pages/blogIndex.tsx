@@ -2,8 +2,15 @@ import { useState, useEffect } from 'react';
 import { Header } from '../components/Header';
 import { PostPreview } from '../components/PostPreview';
 import { BlogPost } from '../interfaces/BlogPost';
+import { Oval } from 'react-loading-icons';
+import { getElementById } from 'domutils';
 
 // TODO: Paginate results
+
+function hideLoader(): void {
+  const loader = document.getElementById('loader');
+  if (loader) loader.style.display = 'none';
+}
 
 export function Blog() {
   const [list, setList] = useState([]);
@@ -17,6 +24,7 @@ export function Blog() {
       .then((response) => response.json())
       .then((data) => {
         setList(data);
+        hideLoader();
       })
       .catch((err) => {
         err.name !== 'AbortError' && setErr('Error retrieving posts.');
@@ -36,6 +44,7 @@ export function Blog() {
           {list.map((post: BlogPost) => (
             <PostPreview key={post._id} post={post} />
           ))}
+          <Oval stroke="#070707" strokeWidth={4} id="loader" />
         </div>
       )}
     </div>
