@@ -19,6 +19,10 @@
   flex-direction: row;
   box-sizing: border-box;
 }
+.homepage-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .first-section {
   min-height: 350px;
   max-height: 350px;
@@ -190,8 +194,10 @@ nav {
   margin: auto;
   display: block;
 }
-@media (max-width: 660px) {
-  .homepage-section {
+@media (max-width: 700px) {
+  .homepage-section,
+  .homepage-cards-wrapper {
+    display: flex;
     flex-direction: column;
   }
   .first-section {
