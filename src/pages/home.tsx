@@ -44,7 +44,7 @@ export function Home(): ReactElement {
             alt="Matt squatting next to a small cactus"
           />
         </section>
-        <section className="homepage-section">
+        <section className="homepage-cards-wrapper">
           <ProjectCard
             project={{ ...Projects.projectOne }}
             backgroundColorPrimary={'rgba(255, 165, 0, 1)'}
