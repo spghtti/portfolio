@@ -14,7 +14,9 @@ export function Home(): ReactElement {
               <h1>
                 Hey,<span className="emoji wave-emoji">&#x1F44B;</span>I'm Matt.
               </h1>
-              <h2>I'm a full-stack web dev.</h2>
+              <h2>
+                I'm a full-stack <span className="inline-block">web dev.</span>
+              </h2>
               <h2>Check out some of my work below.</h2>
               <div className="hero-card-buttons-container">
                 <a href="https://github.com/spghtti">
