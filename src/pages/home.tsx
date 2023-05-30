@@ -15,9 +15,9 @@ export function Home(): ReactElement {
                 Hey,<span className="emoji wave-emoji">&#x1F44B;</span>I'm Matt.
               </h1>
               <h2>
-                I'm a full-stack <span className="inline-block">web dev.</span>
+                I'm a <span className="inline-block">web developer</span> based
+                in Boston.
               </h2>
-              <h2>Check out some of my work below.</h2>
               <div className="hero-card-buttons-container">
                 <a href="https://github.com/spghtti">
                   <button className="hero-card-button">
@@ -49,25 +49,25 @@ export function Home(): ReactElement {
         <section className="homepage-cards-wrapper">
           <ProjectCard
             project={{ ...Projects.projectOne }}
-            backgroundColorPrimary={'rgba(255, 165, 0, 1)'}
-            backgroundColorSecondary={'rgba(255, 165, 0, .7)'}
+            backgroundColorPrimary={'rgba(255, 165, 0, .8)'}
+            backgroundColorSecondary={'rgba(255, 165, 0, .6)'}
           />
           <ProjectCard
             project={{ ...Projects.projectTwo }}
-            backgroundColorPrimary={'rgba(238, 130, 238, 1)'}
-            backgroundColorSecondary={'rgba(238, 130, 238, .7)'}
+            backgroundColorPrimary={'rgba(204, 153, 255, .8)'}
+            backgroundColorSecondary={'rgba(204, 153, 255, .6)'}
           />
         </section>
         <section className="homepage-section">
           <ProjectCard
             project={{ ...Projects.projectThree }}
-            backgroundColorPrimary={'rgba(255, 127, 80, 1)'}
-            backgroundColorSecondary={'rgba(255, 127, 80, .7)'}
+            backgroundColorPrimary={'rgba(255, 127, 80, .8)'}
+            backgroundColorSecondary={'rgba(255, 127, 80, .6)'}
           />
           <ProjectCard
             project={{ ...Projects.projectFour }}
-            backgroundColorPrimary={'rgba(154, 205, 50, 1)'}
-            backgroundColorSecondary={'rgba(154, 205, 50, .7)'}
+            backgroundColorPrimary={'rgba(154, 205, 50, .8)'}
+            backgroundColorSecondary={'rgba(154, 205, 50, .6)'}
           />
         </section>
       </main>

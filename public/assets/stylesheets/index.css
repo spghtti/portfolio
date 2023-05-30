@@ -97,21 +97,25 @@ nav {
 .hero-card-buttons-container {
   margin-top: 1rem;
 }
+.hero-card-buttons-container > a {
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
 .hero-card-button {
   font-family: 'San Francisco Display', Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 0.85rem;
   white-space: nowrap;
   min-width: 110px;
-  height: 2.5rem;
   border-radius: 20px;
+  /* height: 2.5rem; */
   border-style: none;
   padding: 0.75rem 1.5rem;
-  margin-right: 0.5rem;
-  margin-top: 0.5rem;
   color: var(--font-color-main);
   background-color: var(--button-background-color);
+  cursor: pointer;
 }
+
 .project-card-buttons {
   font-family: 'San Francisco';
   font-weight: 500;
@@ -129,6 +133,12 @@ nav {
   border-style: none;
   color: var(--font-color-main);
   background-color: var(--button-background-color);
+}
+.button-link {
+  cursor: default !important;
+}
+.button-link > button {
+  cursor: pointer;
 }
 .icon-only {
   text-align: right;
