@@ -14,24 +14,24 @@ export const ProjectCard: FC<Props> = ({
 }) => {
   return (
     <div
-      className="homepage-card"
-      style={{
-        backgroundImage: `linear-gradient(to bottom right, ${backgroundColorPrimary}, ${backgroundColorSecondary}) `,
-      }}
+      className="homepage-card project"
+      // style={{
+      //   backgroundImage: `linear-gradient(to bottom right, ${backgroundColorPrimary}, ${backgroundColorSecondary}) `,
+      // }}
     >
-      <div className="homepage-card-inner">
-        <div className="homepage-card-headline-container">
+      <div className="project-card-inner">
+        <div className="project-card-headline-container">
           <div>
-            <h1 className="homepage-card-headline">{project.title}</h1>
-            <ul className="homepage-card-stack">
+            <h2 className="project-card-headline">{project.title}</h2>
+            <ul className="project-card-stack">
               {project.stack.map((item: String, index) => (
-                <li key={index}>{item}</li>
+                <li key={index}>{item}.</li>
               ))}
             </ul>
           </div>
           <div className="project-card-buttons icon-only">
             <a href={project.github_link} className="button-link">
-              <button>
+              <button className="button-color">
                 <img
                   src="../../assets/icons/github.svg"
                   className="button-icon"
@@ -39,7 +39,7 @@ export const ProjectCard: FC<Props> = ({
               </button>
             </a>
             <a href={project.live_link} className="button-link">
-              <button>
+              <button className="button-color">
                 <img
                   src="../../assets/icons/globe.svg"
                   className="button-icon"
@@ -48,7 +48,7 @@ export const ProjectCard: FC<Props> = ({
             </a>
           </div>
         </div>
-        <p className="homepage-card-description">{project.description}</p>
+        <p className="project-card-description">{project.description}</p>
         <img
           src={`/assets/images/${project.image}`}
           className="project-image"

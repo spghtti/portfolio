@@ -1,7 +1,7 @@
 import Project from './interfaces/Project';
 
 export const projectOne: Project = {
-  title: 'Blog API + CMS',
+  title: 'Blog, API, & CMS',
   description:
     'A RESTful blog API for my portfolio and CMS for writing and editing posts. Features a rich text editor and user commenting.',
   stack: ['MongoDB', 'Express', 'React', 'Node', 'Typescript'],
