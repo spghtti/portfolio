@@ -311,7 +311,16 @@ nav {
   }
   .homepage-stack-container div:nth-child(1) {
     /* grid-column-end: span 2; */
+    display: flex;
+    justify-content: center;
     grid-column-end: span 2;
+    /* grid-row-end: span 1; */
     background-color: white;
+  }
+  .tech-icon {
+    margin-right: 2px;
+  }
+  .homepage-divider > h1 {
+    text-align: center;
   }
 }
