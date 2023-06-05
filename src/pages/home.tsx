@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, useEffect, useRef } from 'react';
 import { ProjectCard } from '../components/ProjectCard';
 import { Technology } from '../components/TechnologyCard';
 import * as Projects from '../projectList';
@@ -6,6 +6,39 @@ import * as Stack from '../stackList';
 import { Header } from '../components/Header';
 
 export function Home(): ReactElement {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const techStack = document.querySelectorAll<HTMLElement>('.tech-card');
+
+    console.log(techStack);
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          console.log('intersecting');
+          techStack.forEach((card, index) => {
+            if (index > 0) {
+              // card.setAttribute('style', `animation-delay: ${index * 0.25}s `);
+              card.style.animationDelay = `${index * 0.25}s `;
+            }
+
+            card.className = card.className + ' pop-in';
+          });
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        root: null,
+        rootMargin: '0px 0px -50% 0px',
+        threshold: 0,
+      }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+  }, [ref]);
+
   return (
     <div>
       <Header />
@@ -17,8 +50,9 @@ export function Home(): ReactElement {
                 Hey,<span className="emoji wave-emoji">&#x1F44B;</span>I'm Matt.
               </h1>
               <h2>
-                I'm a <span className="inline-block">web developer</span> based
-                in Boston.
+                I'm a{' '}
+                <span className="inline-block highlight">web developer</span>{' '}
+                based in Boston.
               </h2>
               <div className="hero-card-buttons-container">
                 <a href="https://github.com/spghtti">
@@ -50,7 +84,7 @@ export function Home(): ReactElement {
         </section>
         <section className="homepage-section">
           <div className="homepage-stack-container">
-            <div className="homepage-card title-card tech-card">
+            <div className="homepage-card title-card" ref={ref}>
               <div className="homepage-card-inner">
                 <h1 className="smaller-h1">Skills &#128218;</h1>
               </div>
@@ -68,8 +102,10 @@ export function Home(): ReactElement {
           </div>
         </section>
         <section className="homepage-section">
-          <div className="homepage-divider homepage-card title card">
-            <h1>Personal projects &#128296;</h1>
+          <div className="fill">
+            <div className="homepage-divider homepage-card title-card">
+              <h1>Personal projects &#128296;</h1>
+            </div>
           </div>
           <div className="project-cards-wrapper">
             <ProjectCard

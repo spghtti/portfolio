@@ -10,14 +10,15 @@
   min-height: 100vh;
   overflow-x: hidden;
   /* --site-background-color: #f7f7f7; */
-  --site-background-color: #f7f7f7;
+  --site-background-color: rgb(235, 235, 235);
   --font-color-main: #070707;
   --font-color-accent: #424948;
   --font-color-white: #ffffff;
   --font-color-light-accent: #cdd3d3;
   --code-background-color: #18181a;
   --shadow-color: #b7b6b6;
-  --button-background-color: #e9e9ed;
+  --button-background-color: rgba(124, 67, 208, 0.7);
+  --button-background-color-light: rgba(124, 67, 208, 0.4);
 }
 body {
   font-family: 'San Francisco Display', Arial, Helvetica, sans-serif;
