@@ -50,8 +50,9 @@ export function Home(): ReactElement {
                 Hey,<span className="emoji wave-emoji">&#x1F44B;</span>I'm Matt.
               </h1>
               <h2>
-                I'm a <span className="inline-block">web developer</span> based
-                in Boston.
+                I'm a{' '}
+                <span className="inline-block highlight">web developer</span>{' '}
+                based in Boston.
               </h2>
               <div className="hero-card-buttons-container">
                 <a href="https://github.com/spghtti">

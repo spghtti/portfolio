@@ -139,16 +139,28 @@ nav {
   cursor: pointer;
 }
 .button-color {
-  background-color: rgba(124, 67, 208, 0.7) !important;
   color: var(--font-color-main);
   font-weight: 600;
   transition: background-color 0.2s;
 }
 .button-color:hover {
   cursor: pointer;
-  background-color: rgba(124, 67, 208, 0.4) !important;
+  background-color: var(--button-background-color-light) !important;
 }
-
+.highlight {
+  /* position: relative; */
+  line-height: 1;
+  color: black;
+  background-color: var(--button-background-color-light) !important;
+  background: linear-gradient(to right, #efc169 50%, transparent 50%);
+  /* height: 2rem; */
+  height: 0.85rem;
+  background-size: 200% 50%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+}
+.highlight::before {
+}
 .project-card-buttons {
   font-family: 'San Francisco';
   font-weight: 500;
@@ -218,6 +230,7 @@ nav {
 }
 .project-card-headline {
   color: var(--font-color-main);
+  display: inline-block;
   font-style: 'San Francisco Display';
   font-size: 1.5rem;
   font-weight: bold;

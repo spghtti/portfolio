@@ -3,7 +3,6 @@ import { Header } from '../components/Header';
 import { PostPreview } from '../components/PostPreview';
 import { BlogPost } from '../interfaces/BlogPost';
 import { Oval } from 'react-loading-icons';
-import { getElementById } from 'domutils';
 
 // TODO: Paginate results
 

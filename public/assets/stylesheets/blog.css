@@ -40,9 +40,8 @@
   list-style-type: none;
   display: inline-block;
   margin-right: 0.5rem;
-  /* border: 1px solid black; */
-  color: white;
-  background-color: rgb(12, 14, 14);
+  color: var(--font-color-main);
+  background-color: var(--button-background-color);
   padding: 0 0.5rem;
   border-radius: 25px;
 }
