@@ -148,18 +148,10 @@ nav {
   background-color: var(--button-background-color-light) !important;
 }
 .highlight {
-  /* position: relative; */
-  line-height: 1;
-  color: black;
+  /* line-height: 0; */
   background-color: var(--button-background-color-light) !important;
-  background: linear-gradient(to right, #efc169 50%, transparent 50%);
-  /* height: 2rem; */
-  height: 0.85rem;
-  background-size: 200% 50%;
-  background-position: right bottom;
-  transition: all 0.5s ease-out;
-}
-.highlight::before {
+  /* height: -10px; */
+  padding: 0 0.25rem;
 }
 .project-card-buttons {
   font-family: 'San Francisco';
