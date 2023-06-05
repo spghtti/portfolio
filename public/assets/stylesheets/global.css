@@ -10,7 +10,7 @@
   min-height: 100vh;
   overflow-x: hidden;
   /* --site-background-color: #f7f7f7; */
-  --site-background-color: #f7f7f7;
+  --site-background-color: rgb(235, 235, 235);
   --font-color-main: #070707;
   --font-color-accent: #424948;
   --font-color-white: #ffffff;
