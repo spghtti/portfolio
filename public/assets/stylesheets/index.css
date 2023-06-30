@@ -201,6 +201,8 @@ nav {
   object-fit: cover;
   min-width: 250px;
   max-width: 400px;
+  text-indent: -100%;
+  overflow: hidden;
 }
 .homepage-picture-img,
 .homepage-card {

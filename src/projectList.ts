@@ -7,7 +7,7 @@ export const projectOne: Project = {
   stack: ['MongoDB', 'Express', 'React', 'Node', 'Typescript'],
   github_link: 'https://github.com/spghtti/blog-api',
   live_link: '/blog',
-  image: 'blog.png',
+  image: 'blog.webp',
 };
 
 export const projectTwo: Project = {
@@ -17,7 +17,7 @@ export const projectTwo: Project = {
   stack: ['React', 'Firestore', 'Firebase Auth'],
   github_link: 'https://github.com/spghtti/reactr',
   live_link: 'https://reactr-2cec5.web.app/',
-  image: 'reactr.png',
+  image: 'reactr.webp',
 };
 
 export const projectThree: Project = {
@@ -28,7 +28,7 @@ export const projectThree: Project = {
   github_link: 'https://github.com/spghtti/keyboard-inventory-app',
   live_link:
     'https://keyboard-inventory-app-production.up.railway.app/inventory',
-  image: 'wasd.png',
+  image: 'wasd.webp',
 };
 
 export const projectFour: Project = {
@@ -38,5 +38,5 @@ export const projectFour: Project = {
   stack: ['React', 'Firestore'],
   github_link: 'https://github.com/spghtti/ufoundme',
   live_link: 'https://foundme-spghtti.web.app/',
-  image: 'ufoundme.png',
+  image: 'ufoundme.webp',
 };

@@ -77,7 +77,7 @@ export function Home(): ReactElement {
             </div>
           </div>
           <img
-            src="/assets/images/me.jpeg"
+            src="/assets/images/me.webp"
             className="homepage-picture-img"
             alt="Matt squatting next to a small cactus"
           />
